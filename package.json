@@ -1,0 +1,17 @@
+{
+  "name": "copymarket-agent-economy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CopyMarket - an escrow-settled agent market for landing-page copy rescue services.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "install:agents": "pnpm --dir coral-agents/buyer-agent install --lockfile=false --ignore-scripts && pnpm --dir coral-agents/seller-agent install --lockfile=false --ignore-scripts",
+    "typecheck": "pnpm --dir coral-agents/buyer-agent run typecheck && pnpm --dir coral-agents/seller-agent run typecheck",
+    "test": "pnpm --dir coral-agents/buyer-agent test && pnpm --dir coral-agents/seller-agent test",
+    "verify": "pnpm run install:agents && pnpm run typecheck && pnpm test",
+    "wallets:devnet": "pnpm --dir coral-agents/buyer-agent run wallets:devnet",
+    "proof:arbiter": "pnpm --dir coral-agents/buyer-agent run proof:arbiter",
+    "check": "pnpm run verify"
+  }
+}

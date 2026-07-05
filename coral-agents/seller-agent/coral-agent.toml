@@ -1,0 +1,31 @@
+edition = 4
+
+[agent]
+name = "seller-agent"
+version = "0.1.0"
+description = "CopyMarket seller. Bids on copyrescue WANTs, verifies arbiter-funded escrow, and delivers a structured landing-page copy rescue."
+summary = "TypeScript copy rescue seller that competes in CoralOS and settles through arbiter-gated escrow."
+readme = "Bids in the shared market thread (WANT -> BID), issues ESCROW_REQUIRED with settlement=arbiter, verifies the funded vault escrow on DEPOSITED, then delivers a concise hero, CTA, section rewrite, and conversion-risk report."
+
+[agent.license]
+type = "spdx"
+expression = "MIT"
+
+[options]
+SELLER_WALLET = { type = "string", description = "Devnet wallet pubkey that receives payments" }
+AGENT_NAME = { type = "string", default = "seller-agent", description = "Market identity for this seller persona" }
+SERVICES = { type = "string", default = "copyrescue", description = "Inventory; CopyMarket uses copyrescue" }
+FLOOR_SOL = { type = "f64", default = 0.0005, description = "Minimum bid in SOL" }
+PERSONA = { type = "string", default = "a landing page conversion copy specialist selling concise copy rescues", description = "Bidding persona" }
+SERVICE = { type = "string", default = "copyrescue", description = "Delivery service; only copyrescue is routed" }
+SOLANA_RPC_URL = { type = "string", default = "", description = "Solana RPC URL" }
+SETTLEMENT_MODE = { type = "string", default = "arbiter", description = "arbiter (default) | direct legacy base escrow" }
+ESCROW_DEADLINE_SECS = { type = "f64", default = 600, description = "Refund deadline for escrow deposits (seconds)" }
+ANTHROPIC_API_KEY = { type = "string", default = "", description = "Anthropic key for live reads" }
+OPENAI_API_KEY = { type = "string", default = "", description = "OpenAI key; set LLM_PROVIDER=openai to use it" }
+LLM_PROVIDER = { type = "string", default = "", description = "anthropic (default) | openai" }
+LLM_MODEL = { type = "string", default = "", description = "Override the LLM model id" }
+TRACE = { type = "string", default = "", description = "Set to 1 to log settlement checks" }
+
+[runtimes.docker]
+image = "seller-agent:0.1.0"

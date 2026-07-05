@@ -1,0 +1,19 @@
+{
+    "ok":  true,
+    "type":  "buyer_to_seller_transfer_smoke_proof",
+    "signature":  "49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo",
+    "explorer":  "https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet",
+    "buyer":  "6WwdWJNYYFAthMJFP1gdM7xysGJv1GhwpBRSL2ch8Yhd",
+    "seller":  "FeXKD6fYwGeBMeU5G9qF6HJk3Z9Wj5qFjFTopktFmJfD",
+    "amountLamports":  1000000,
+    "amountSOL":  0.001,
+    "buyerPreBalanceLamports":  1000000000,
+    "buyerPostBalanceLamports":  998995000,
+    "sellerPreBalanceLamports":  0,
+    "sellerPostBalanceLamports":  1000000,
+    "feeLamports":  5000,
+    "slot":  473467778,
+    "rpc":  "https://api.devnet.solana.com",
+    "status":  "finalized",
+    "note":  "Live devnet transfer proof from CopyMarket buyer wallet to seller wallet. This is a smoke proof, not the full arbiter escrow lifecycle."
+}

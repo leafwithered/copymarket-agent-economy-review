@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+WALLETS.txt
+ARBITER_LIFECYCLE_PROOF.local.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+qa/

@@ -1,0 +1,37 @@
+{
+  "service": "copyrescue",
+  "request": "crypto wallet landing page needs a clearer hero and trust path",
+  "audience": "crypto",
+  "currentIssue": "The first screen is likely asking visitors to decode the product before they see the outcome, proof, and next step.",
+  "hero": {
+    "headline": "Turn crypto visitors into qualified actions faster",
+    "subheadline": "Clarify the offer, remove trust friction, and show exactly what happens after the first click.",
+    "cta": "Get the 48h copy rescue"
+  },
+  "sections": [
+    {
+      "title": "Outcome first",
+      "copy": "Lead with the business result visitors can understand in five seconds, then support it with product mechanics."
+    },
+    {
+      "title": "Trust path",
+      "copy": "Explain what users share, what they keep control of, and which proof points make the decision feel safe."
+    },
+    {
+      "title": "Action flow",
+      "copy": "Use one primary CTA, a short expectation-setting line, and a second proof point directly beside the action."
+    }
+  ],
+  "conversionNotes": [
+    "Move the strongest quantified proof above the first scroll.",
+    "Replace abstract category language with a concrete user action.",
+    "Put risk-reducing copy next to the primary CTA, not only in the FAQ."
+  ],
+  "riskControls": [
+    "No guaranteed revenue, ranking, token-price, or investment claims.",
+    "Keep compliance-sensitive wording factual and verifiable.",
+    "Use user-control language when payments, wallets, or personal data are involved."
+  ],
+  "generatedBy": "deterministic",
+  "timestamp": "2026-07-01T17:09:00.151Z"
+}
