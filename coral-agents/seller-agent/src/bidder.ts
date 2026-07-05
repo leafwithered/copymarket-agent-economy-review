@@ -42,7 +42,7 @@ export async function decideBid(want: Want, cfg: SellerConfig, llm: Llm = comple
   if (cfg.floorSol > want.budgetSol) return { bid: false, priceSol: 0, note: 'budget below floor' }
 
   const system =
-    `You are ${cfg.name}, ${cfg.persona}. You sell escrow-settled agent services. Decide whether to bid on a ` +
+    `You are ${cfg.name}, ${cfg.persona}. You sell escrow-aware agent services. Decide whether to bid on a ` +
     `request and at what price in SOL. Your cost floor is ${cfg.floorSol} SOL - never propose below it; ` +
     `the buyer's budget caps the price. Reply ONLY with JSON: {"bid": boolean, "price": number, ` +
     `"note": string}. Keep note under 8 words.`

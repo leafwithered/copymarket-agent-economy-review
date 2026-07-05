@@ -17,7 +17,7 @@ https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/CopyMa
 Review tag:
 
 ```text
-https://github.com/leafwithered/copymarket-agent-economy-review/releases/tag/v0.1-review-package
+https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package
 ```
 
 Do not upload:

@@ -58,7 +58,7 @@ async function pickWinner(pool: Bid[]): Promise<{ winner: Bid; reason?: string }
   if (pool.length === 1) return { winner: pool[0] }
   try {
     const system =
-      'You are a buyer choosing the best-value bid for an escrow-settled agent service. ' +
+      'You are a buyer choosing the best-value bid for an escrow-aware agent service. ' +
       'Reply ONLY with JSON {"by": "<seller name>", "reason": "<short>"}.'
     const user =
       `service=${SERVICE} arg=${ARG} budget=${BUDGET}\nbids:\n` +

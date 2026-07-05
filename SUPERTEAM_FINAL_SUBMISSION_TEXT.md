@@ -39,7 +39,7 @@ No real revenue is claimed yet. The next milestone is one paid copyrescue loop w
 
 Pitch deck: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/CopyMarket_Agent_Economy_Pitch.pptx
 Demo video: https://github.com/leafwithered/copymarket-agent-economy-review/raw/main/CopyMarket_demo_video.mp4
-Review tag: https://github.com/leafwithered/copymarket-agent-economy-review/releases/tag/v0.1-review-package
+Review tag snapshot: https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package
 Public package backup: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/CopyMarket_submission_package.zip
 
 One-page reviewer page: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/docs/index.html
