@@ -123,7 +123,7 @@ https://superteam.fun/earn/t/leafmyx
 
 ## Grant Plan
 
-Target deadline: July 17, 2026.
+Target deadline: July 12, 2026.
 
 ### Milestone 1 - Product hardening
 

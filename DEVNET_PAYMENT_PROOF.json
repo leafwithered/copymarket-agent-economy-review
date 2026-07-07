@@ -15,5 +15,5 @@
     "slot":  473467778,
     "rpc":  "https://api.devnet.solana.com",
     "status":  "finalized",
-    "note":  "Live devnet transfer proof from CopyMarket buyer wallet to seller wallet. This is a smoke proof, not the full arbiter escrow lifecycle."
+    "note":  "Live devnet transfer proof from CopyMarket buyer wallet to seller wallet. This is the smoke transfer proof; see DEVNET_ESCROW_LIFECYCLE_PROOF.json for arbiter open/deposit plus direct release/refund proof."
 }

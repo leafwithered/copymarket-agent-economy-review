@@ -58,7 +58,7 @@ CopyMarket fits the grant because it turns agent work into a verifiable economic
 - seller agents can bid, win, and deliver structured output
 - Solana devnet proves the settlement flow and public review trail
 - `copyrescue` is the first monetizable service, narrow enough to inspect and sell
-- the next milestone is real revenue with production-grade settlement, USDC or mainnet payment rails, and stronger escrow lifecycle proofs
+- the next milestone is real revenue with production-grade settlement, USDC or mainnet payment rails, and the remaining arbiter-release proof
 
 No real revenue is claimed yet. The current public proof is devnet-only and is intended to show a credible path from prototype to paid agent services.
 
