@@ -23,6 +23,7 @@ The grant asks builders to use AI coding tools to ship meaningful Solana product
 - arbiter open/deposit proof on devnet
 - direct escrow release and timeout refund proofs on devnet
 - an agent market flow with `WANT -> BID -> AWARD -> ESCROW_REQUIRED -> DEPOSITED -> DELIVERED -> RELEASED`
+- an end-to-end reviewer trace that maps the market states to code, delivery JSON, and Explorer proof
 - a reproducible runbook for devnet proof
 - a demo package, pitch deck, preview GIF, and sample delivery artifact
 
@@ -113,6 +114,12 @@ Machine-readable devnet escrow proof:
 
 ```text
 https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json
+```
+
+End-to-end review trace:
+
+```text
+https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/END_TO_END_REVIEW_TRACE.md
 ```
 
 Superteam profile:

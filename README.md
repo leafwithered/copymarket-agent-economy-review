@@ -12,9 +12,10 @@ CopyMarket Agent Economy is a Solana devnet prototype for agent-to-agent paid wo
 2. Watch the demo video: https://github.com/leafwithered/copymarket-agent-economy-review/raw/main/CopyMarket_demo_video.mp4
 3. Open the review tag snapshot: https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package
 4. Inspect devnet proof: `DEVNET_PAYMENT_PROOF.json`, `DEVNET_ESCROW_LIFECYCLE_PROOF.json`, and the Explorer links below.
-5. Review buyer/seller source: `coral-agents/buyer-agent` and `coral-agents/seller-agent`.
-6. Run local checks from `DEVNET_RUNBOOK.md` or GitHub Actions CI.
-7. Read proof scope: `ARBITER_LIFECYCLE_STATUS.md` and `FULL_ARBITER_ESCROW_PROOF.md`.
+5. Read the end-to-end reviewer trace: `END_TO_END_REVIEW_TRACE.md`.
+6. Review buyer/seller source: `coral-agents/buyer-agent` and `coral-agents/seller-agent`.
+7. Run local checks from `DEVNET_RUNBOOK.md` or GitHub Actions CI.
+8. Read proof scope: `ARBITER_LIFECYCLE_STATUS.md` and `FULL_ARBITER_ESCROW_PROOF.md`.
 
 ### Current Status
 
@@ -189,6 +190,7 @@ Then inspect these repo artifacts:
 - Devnet runbook: `DEVNET_RUNBOOK.md`
 - Smoke payment proof: `DEVNET_PAYMENT_PROOF.json`
 - Escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
+- End-to-end review trace: `END_TO_END_REVIEW_TRACE.md`
 - Arbiter lifecycle status: `ARBITER_LIFECYCLE_STATUS.md`
 - Full arbiter proof template: `FULL_ARBITER_ESCROW_PROOF.md`
 - X post backup: `X_POST_BACKUP.md`
@@ -238,6 +240,7 @@ https://x.com/leafmyx/status/2072747881883369696
 - Devnet airdrop proof: `devnet_airdrop_proof.json`
 - Devnet buyer-to-seller payment proof: `DEVNET_PAYMENT_PROOF.json`
 - Devnet escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
+- End-to-end review trace: `END_TO_END_REVIEW_TRACE.md`
 - Arbiter lifecycle proof status: `ARBITER_LIFECYCLE_STATUS.md`
 - X post backup: `X_POST_BACKUP.md`
 - Review tag notes: `RELEASE_NOTES_v0.1_REVIEW_PACKAGE.md`

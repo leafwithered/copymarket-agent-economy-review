@@ -44,6 +44,7 @@ Public package backup: https://github.com/leafwithered/copymarket-agent-economy-
 
 One-page reviewer page: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/docs/index.html
 GitHub Pages target served from the gh-pages branch: https://leafwithered.github.io/copymarket-agent-economy-review/
+End-to-end review trace: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/END_TO_END_REVIEW_TRACE.md
 Public X launch thread: https://x.com/leafmyx/status/2072747881883369696
 X backup summary: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/X_POST_BACKUP.md
 
@@ -69,6 +70,7 @@ Live devnet proof:
   - deposit: https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
   - refund: https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
 - public proof metadata: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json
+- end-to-end review trace: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/END_TO_END_REVIEW_TRACE.md
 - RPC used: https://api.devnet.solana.com
 - DEVNET_RUNBOOK.md explains runnable local checks.
 - ARBITER_LIFECYCLE_STATUS.md explains the completed proof and the remaining honest limitation: arbiter release is not claimed because the deployed arbiter config requires a different signer than the local disposable arbiter key.

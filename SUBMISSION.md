@@ -54,6 +54,12 @@ X backup summary:
 https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/X_POST_BACKUP.md
 ```
 
+End-to-end review trace:
+
+```text
+https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/END_TO_END_REVIEW_TRACE.md
+```
+
 Reviewer contact:
 
 ```text
@@ -114,6 +120,7 @@ founder tool, broker, or marketplace workflow could buy without a human sales cy
 - Devnet airdrop proof: `devnet_airdrop_proof.json`
 - Devnet buyer-to-seller payment proof: `DEVNET_PAYMENT_PROOF.json`
 - Devnet escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
+- End-to-end review trace: `END_TO_END_REVIEW_TRACE.md`
 - Arbiter lifecycle proof status: `ARBITER_LIFECYCLE_STATUS.md`
 - Demo script: `demo_video_script.md`
 - Upload checklist: `UPLOAD_AND_SUBMIT.md`
