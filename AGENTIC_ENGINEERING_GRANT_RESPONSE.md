@@ -20,6 +20,8 @@ The grant asks builders to use AI coding tools to ship meaningful Solana product
 
 - a public repo and reviewer page
 - a buyer-to-seller devnet payment proof
+- arbiter open/deposit proof on devnet
+- direct escrow release and timeout refund proofs on devnet
 - an agent market flow with `WANT -> BID -> AWARD -> ESCROW_REQUIRED -> DEPOSITED -> DELIVERED -> RELEASED`
 - a reproducible runbook for devnet proof
 - a demo package, pitch deck, preview GIF, and sample delivery artifact
@@ -87,6 +89,32 @@ Solana devnet funding proof:
 https://explorer.solana.com/tx/4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBziieaE2W8khwRree3iVnjrUTTBkyC497u6vAUoBe?cluster=devnet
 ```
 
+Solana devnet arbiter open / deposit proof:
+
+```text
+https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+```
+
+Solana devnet direct escrow release proof:
+
+```text
+https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+```
+
+Solana devnet direct escrow refund proof:
+
+```text
+https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
+```
+
+Machine-readable devnet escrow proof:
+
+```text
+https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json
+```
+
 Superteam profile:
 
 ```text
@@ -121,7 +149,7 @@ Deliverables:
 
 ## Current Limitations
 
-The current public proof includes a live buyer-to-seller devnet transfer and a documented escrow-gated flow. The full arbiter lifecycle transaction set is tracked in `ARBITER_LIFECYCLE_STATUS.md` and is not claimed as complete yet. It is honest about the remaining hardening work: the full arbiter escrow lifecycle is the next strongest proof target, and mainnet use is out of scope. The current project is devnet-only and must not use funded mainnet wallets.
+The current public proof includes a live buyer-to-seller devnet transfer, arbiter open/deposit, direct escrow release, and direct escrow timeout refund. Arbiter release is not claimed because the deployed arbiter config requires a different signer than the local disposable arbiter key. Mainnet use and real revenue are out of scope for the current version.
 
 ## Contact
 

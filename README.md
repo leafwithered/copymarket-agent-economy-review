@@ -11,7 +11,7 @@ CopyMarket Agent Economy is a Solana devnet prototype for agent-to-agent paid wo
 1. Open the live reviewer page: https://leafwithered.github.io/copymarket-agent-economy-review/
 2. Watch the demo video: https://github.com/leafwithered/copymarket-agent-economy-review/raw/main/CopyMarket_demo_video.mp4
 3. Open the review tag snapshot: https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package
-4. Inspect devnet proof: `DEVNET_PAYMENT_PROOF.json` and the Explorer links below.
+4. Inspect devnet proof: `DEVNET_PAYMENT_PROOF.json`, `DEVNET_ESCROW_LIFECYCLE_PROOF.json`, and the Explorer links below.
 5. Review buyer/seller source: `coral-agents/buyer-agent` and `coral-agents/seller-agent`.
 6. Run local checks from `DEVNET_RUNBOOK.md` or GitHub Actions CI.
 7. Read proof scope: `ARBITER_LIFECYCLE_STATUS.md` and `FULL_ARBITER_ESCROW_PROOF.md`.
@@ -22,8 +22,9 @@ CopyMarket Agent Economy is a Solana devnet prototype for agent-to-agent paid wo
 - Structured `copyrescue` delivery artifact included.
 - Direct demo video link and pitch deck link included.
 - Devnet buyer-to-seller payment smoke proof included.
+- Finalized devnet escrow proof now includes arbiter open/deposit plus direct escrow release and refund paths.
 - Buyer and seller tests included: 29 tests total.
-- Current public chain proof is a devnet settlement smoke proof, not yet a full captured arbiter escrow lifecycle.
+- Arbiter release is not claimed because the deployed arbiter config requires a signer whose private key is not present locally.
 
 ---
 
@@ -45,7 +46,7 @@ This is not a chatbot demo. It is a small agent-to-agent paid service market: ag
 | Why is it Agent Economy? | Buyer agents define demand, seller agents compete, the winner delivers structured output, and payment is conditional on settlement state. |
 | What does Solana do? | Solana devnet is the settlement/proof rail for escrow-style payment state and reviewer-visible transfer proof. |
 | What can a judge verify quickly? | Code, tests, sample delivery JSON, devnet Explorer proofs, runbook, GitHub Pages demo, and the grant response. |
-| What is honest scope? | Devnet only. The public Explorer proof includes a live buyer-to-seller smoke transfer; production-grade hardening is not claimed. |
+| What is honest scope? | Devnet only. Public proof includes smoke transfer, arbiter open/deposit, and direct escrow release/refund; full arbiter release is not claimed. |
 
 ## Grant Fit
 
@@ -117,12 +118,15 @@ Public proof today:
 
 - devnet funding proof for the buyer wallet
 - finalized devnet buyer-to-seller smoke transfer
+- finalized arbiter open / vault-backed deposit transaction
+- finalized direct escrow deposit / release transaction pair
+- finalized direct escrow deposit / timeout refund transaction pair
 - local test record: 29 passing tests across buyer and seller packages
 - sample `copyrescue` delivery artifact
 
 Honest limitation:
 
-The current public Explorer proof is a smoke settlement transfer, not a full captured arbiter escrow lifecycle. The code and runbook describe the escrow/arbiter path, and the next strongest proof target is a public transaction set for deposit, delivery, release, timeout, and refund. Real mainnet funds are out of scope.
+The current public Explorer proof includes arbiter open/deposit and direct escrow release/refund. It does not claim arbiter release because the deployed arbiter config requires a different signer than the disposable arbiter key available locally. Real mainnet funds are out of scope.
 
 ## What The Agent Sells
 
@@ -166,6 +170,7 @@ In every case the service changes, but the commerce loop stays the same: demand,
 | `sample_copyrescue_delivery.json` | Machine-readable delivery example. |
 | `DEVNET_RUNBOOK.md` | Steps for reproducing a live devnet run. |
 | `DEVNET_PAYMENT_PROOF.json` | Public smoke payment proof metadata. |
+| `DEVNET_ESCROW_LIFECYCLE_PROOF.json` | Public devnet escrow proof metadata for arbiter open/deposit plus direct release/refund. |
 
 ## What To Verify
 
@@ -183,6 +188,7 @@ Then inspect these repo artifacts:
 - Delivery example: `sample_copyrescue_delivery.json`
 - Devnet runbook: `DEVNET_RUNBOOK.md`
 - Smoke payment proof: `DEVNET_PAYMENT_PROOF.json`
+- Escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
 - Arbiter lifecycle status: `ARBITER_LIFECYCLE_STATUS.md`
 - Full arbiter proof template: `FULL_ARBITER_ESCROW_PROOF.md`
 - X post backup: `X_POST_BACKUP.md`
@@ -204,6 +210,17 @@ https://explorer.solana.com/tx/4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBz
 Buyer-to-seller smoke transfer:
 https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet
 
+Arbiter open / vault-backed deposit:
+https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+
+Direct escrow deposit / release:
+https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+
+Direct escrow deposit / refund:
+https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
+
 Public X launch thread:
 https://x.com/leafmyx/status/2072747881883369696
 ```
@@ -220,6 +237,7 @@ https://x.com/leafmyx/status/2072747881883369696
 - Review tag snapshot: https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package
 - Devnet airdrop proof: `devnet_airdrop_proof.json`
 - Devnet buyer-to-seller payment proof: `DEVNET_PAYMENT_PROOF.json`
+- Devnet escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
 - Arbiter lifecycle proof status: `ARBITER_LIFECYCLE_STATUS.md`
 - X post backup: `X_POST_BACKUP.md`
 - Review tag notes: `RELEASE_NOTES_v0.1_REVIEW_PACKAGE.md`

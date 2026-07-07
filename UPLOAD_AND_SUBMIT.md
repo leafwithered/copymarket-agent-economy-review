@@ -70,25 +70,32 @@ Completed:
 1. Funded the buyer wallet with 1 devnet SOL.
 2. Verified `https://api.devnet.solana.com` as the working RPC endpoint.
 3. Broadcast a buyer-to-seller devnet payment smoke proof.
+4. Broadcast an arbiter open / vault-backed deposit transaction.
+5. Broadcast direct escrow deposit / release and direct escrow deposit / refund transaction pairs.
 
 Proof files:
 
 - `devnet_airdrop_proof.json`
 - `DEVNET_PAYMENT_PROOF.json`
+- `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
 
 Explorer links:
 
 ```text
 https://explorer.solana.com/tx/4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBziieaE2W8khwRree3iVnjrUTTBkyC497u6vAUoBe?cluster=devnet
 https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet
+https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
 ```
 
-Next best upgrade:
+Honest limitation:
 
-1. Run the market with `TRACE=1`.
-2. Add the full arbiter escrow open and release Explorer transaction links to Superteam `otherInfo`.
-
-Do not mark full arbiter lifecycle proof as complete unless the repository includes the actual Explorer transaction set.
+Do not mark arbiter release as complete. The deployed arbiter config requires a different signer than
+the local disposable arbiter key. Current public proof is devnet-only and includes arbiter
+open/deposit plus direct release/refund paths.
 
 ## Superteam Submission
 

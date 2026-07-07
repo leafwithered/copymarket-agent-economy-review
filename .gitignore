@@ -5,6 +5,7 @@ dist/
 !.env.example
 WALLETS.txt
 ARBITER_LIFECYCLE_PROOF.local.json
+*.local.json
 pnpm-lock.yaml
 pnpm-workspace.yaml
 qa/

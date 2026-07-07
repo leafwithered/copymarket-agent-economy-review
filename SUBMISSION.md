@@ -113,6 +113,7 @@ founder tool, broker, or marketplace workflow could buy without a human sales cy
 - Devnet runbook: `DEVNET_RUNBOOK.md`
 - Devnet airdrop proof: `devnet_airdrop_proof.json`
 - Devnet buyer-to-seller payment proof: `DEVNET_PAYMENT_PROOF.json`
+- Devnet escrow lifecycle proof: `DEVNET_ESCROW_LIFECYCLE_PROOF.json`
 - Arbiter lifecycle proof status: `ARBITER_LIFECYCLE_STATUS.md`
 - Demo script: `demo_video_script.md`
 - Upload checklist: `UPLOAD_AND_SUBMIT.md`
@@ -160,7 +161,8 @@ Result:
 
 ## Live Devnet Proof
 
-The buyer wallet was funded on devnet and a live buyer-to-seller smoke payment was finalized.
+The buyer wallet was funded on devnet. The public proof now includes a live buyer-to-seller smoke
+payment, arbiter open/deposit, direct escrow release, and direct escrow timeout refund.
 
 Funding proof:
 
@@ -174,6 +176,26 @@ Buyer-to-seller payment proof:
 https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet
 ```
 
+Arbiter open / vault-backed deposit:
+
+```text
+https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+```
+
+Direct escrow deposit / release:
+
+```text
+https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+```
+
+Direct escrow deposit / refund:
+
+```text
+https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
+```
+
 RPC used:
 
 ```text
@@ -181,7 +203,11 @@ https://api.devnet.solana.com
 ```
 
 The payment proof transfers 0.001 devnet SOL from buyer to seller and is recorded in
-`DEVNET_PAYMENT_PROOF.json`. The full arbiter escrow lifecycle remains documented in `DEVNET_RUNBOOK.md`.
+`DEVNET_PAYMENT_PROOF.json`. The escrow lifecycle evidence is recorded in
+`DEVNET_ESCROW_LIFECYCLE_PROOF.json`.
+
+Honest limitation: arbiter release is not claimed because the deployed arbiter config requires a
+different signer than the local disposable arbiter key. Current proof is devnet-only.
 
 The contact / claim wallet is separate from the devnet demo wallets. Devnet buyer, seller, and
 arbiter wallets are test-only and are not payout wallets.

@@ -93,8 +93,7 @@ https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshi
 ```
 
 The second transaction transfers 0.001 devnet SOL from the prepared buyer wallet to the prepared seller
-wallet. It is a live payment smoke proof, not the full arbiter escrow lifecycle. The full arbiter escrow
-run remains the strongest next reproduction step below.
+wallet. It is a live payment smoke proof. Stronger escrow lifecycle proof is now published below.
 
 ## Runnable Local Checks
 
@@ -131,35 +130,46 @@ buyer-agent: 2 test files, 13 tests passed
 seller-agent: 5 test files, 16 tests passed
 ```
 
-## Live Arbiter Lifecycle Status
+## Live Escrow Lifecycle Status
 
-The current public Explorer proof is a finalized buyer-to-seller devnet smoke transfer. The repo
-contains the escrow/arbiter code path and devnet guard tests, but it does not yet publish a complete
-Explorer transaction set for `deposit -> delivery -> release/refund`.
+The public Explorer proof now includes:
 
-The next hardening target is to run the arbiter flow with funded devnet wallets and publish the
-open/release Explorer links alongside `DEVNET_PAYMENT_PROOF.json`. Arbiter `open` is the vault-backed
-funding/deposit transaction. The current arbiter client exposes `open` and `arbitrate_release`; a
-separate direct escrow refund proof can also be generated if `RUN_DIRECT_REFUND_PROOF=1`.
+- arbiter `open` / vault-backed deposit
+- direct escrow deposit / release
+- direct escrow deposit / timeout refund
 
-Run:
-
-```sh
-pnpm run proof:arbiter
-```
-
-Expected local output:
+Machine-readable public proof:
 
 ```text
-ARBITER_LIFECYCLE_PROOF.local.json
+DEVNET_ESCROW_LIFECYCLE_PROOF.json
 ```
 
-This file is intentionally ignored by Git. Review it, copy only public addresses and Explorer links
-into `FULL_ARBITER_ESCROW_PROOF.md`, then rebuild the release package if those public links are ready
-to publish.
+Arbiter open / deposit:
 
-Until those links are filled in, this runbook should be read as runnable local checks plus public
-smoke transfer proof, not a completed production escrow audit.
+```text
+https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+```
+
+Direct escrow release path:
+
+```text
+https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+```
+
+Direct escrow refund path:
+
+```text
+https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
+```
+
+Honest limitation:
+
+The deployed arbiter config currently requires arbiter signer
+`Ay2GqHyukwso14RLZWRPhnFMovGGPpVcBzZcnceEiG4Z`. That private key is not present locally, so this
+project does not claim a completed arbiter release transaction. The public proof instead shows
+arbiter deposit semantics plus completed direct release and refund escrow paths.
 
 Required private inputs for that run:
 

@@ -61,9 +61,17 @@ Live devnet proof:
 - arbiter public address: H5xAASAz21bhdtdRi73QSxa1bphXMTGCLXCwCbw2Ud9g
 - funding proof: https://explorer.solana.com/tx/4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBziieaE2W8khwRree3iVnjrUTTBkyC497u6vAUoBe?cluster=devnet
 - buyer-to-seller payment proof: https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet
+- arbiter open / vault-backed deposit: https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet
+- direct escrow deposit / release:
+  - deposit: https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet
+  - release: https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet
+- direct escrow deposit / refund:
+  - deposit: https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet
+  - refund: https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet
+- public proof metadata: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json
 - RPC used: https://api.devnet.solana.com
 - DEVNET_RUNBOOK.md explains runnable local checks.
-- ARBITER_LIFECYCLE_STATUS.md tracks that current public Explorer proof is a buyer-to-seller devnet smoke transfer, not a complete arbiter lifecycle transaction set yet.
+- ARBITER_LIFECYCLE_STATUS.md explains the completed proof and the remaining honest limitation: arbiter release is not claimed because the deployed arbiter config requires a different signer than the local disposable arbiter key.
 
 Main changed files:
 - coral-agents/seller-agent/src/service.ts
@@ -75,6 +83,7 @@ Main changed files:
 - DEVNET_RUNBOOK.md
 - ARBITER_LIFECYCLE_STATUS.md
 - DEVNET_PAYMENT_PROOF.json
+- DEVNET_ESCROW_LIFECYCLE_PROOF.json
 - devnet_airdrop_proof.json
 - SUBMISSION.md
 - CopyMarket_Agent_Economy_Pitch.pptx

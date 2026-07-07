@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-07-07T13:58:40.127Z",
+  "network": "solana-devnet",
+  "scope": "Public devnet escrow lifecycle evidence. No mainnet wallet, real funds, private keys, or claim credentials are included.",
+  "programs": {
+    "escrow": {
+      "address": "R5NWNg9eRLWWQU81Xbzz5Du1k7jTDeeT92Ty6qCeXet",
+      "explorer": "https://explorer.solana.com/address/R5NWNg9eRLWWQU81Xbzz5Du1k7jTDeeT92Ty6qCeXet?cluster=devnet"
+    },
+    "arbiter": {
+      "address": "FJtuVXsyXuRKqgJBEPAXmktkd13CqStapgevzGwYktXd",
+      "explorer": "https://explorer.solana.com/address/FJtuVXsyXuRKqgJBEPAXmktkd13CqStapgevzGwYktXd?cluster=devnet"
+    }
+  },
+  "wallets": {
+    "buyer": {
+      "address": "6WwdWJNYYFAthMJFP1gdM7xysGJv1GhwpBRSL2ch8Yhd",
+      "explorer": "https://explorer.solana.com/address/6WwdWJNYYFAthMJFP1gdM7xysGJv1GhwpBRSL2ch8Yhd?cluster=devnet"
+    },
+    "seller": {
+      "address": "FeXKD6fYwGeBMeU5G9qF6HJk3Z9Wj5qFjFTopktFmJfD",
+      "explorer": "https://explorer.solana.com/address/FeXKD6fYwGeBMeU5G9qF6HJk3Z9Wj5qFjFTopktFmJfD?cluster=devnet"
+    },
+    "localTestArbiter": {
+      "address": "H5xAASAz21bhdtdRi73QSxa1bphXMTGCLXCwCbw2Ud9g",
+      "explorer": "https://explorer.solana.com/address/H5xAASAz21bhdtdRi73QSxa1bphXMTGCLXCwCbw2Ud9g?cluster=devnet"
+    },
+    "configuredOnChainArbiter": {
+      "address": "Ay2GqHyukwso14RLZWRPhnFMovGGPpVcBzZcnceEiG4Z",
+      "note": "The deployed arbiter config currently requires this signer for arbitrate_release. Its private key is not present locally, so this proof does not claim arbiter release."
+    }
+  },
+  "arbiterOpenDeposit": {
+    "status": "finalized",
+    "amountLamports": 1000000,
+    "amountSol": 0.001,
+    "reference": "4HMT3ni5kaT9iQSVhenbP7YPUtsQZv9NF8XjquGN5HZ8",
+    "vaultPda": {
+      "address": "J1g9MvkyHxLnY821AVcpUffMjvByHDFcnXX2sjMfHYWN",
+      "explorer": "https://explorer.solana.com/address/J1g9MvkyHxLnY821AVcpUffMjvByHDFcnXX2sjMfHYWN?cluster=devnet"
+    },
+    "escrowPda": {
+      "address": "AKof1wk9rcGKx63uptsCwnYPCbEKZcskaHRzDhFTMfWu",
+      "explorer": "https://explorer.solana.com/address/AKof1wk9rcGKx63uptsCwnYPCbEKZcskaHRzDhFTMfWu?cluster=devnet"
+    },
+    "openTransaction": {
+      "signature": "2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG",
+      "explorer": "https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet"
+    },
+    "setupTransaction": {
+      "type": "devnet SOL funding for local test arbiter gas",
+      "signature": "5c87TurSca8jAYmgA7faKSHTWXRgp2ZBv3SghMKJ1DQNVwHWtTg7MZtwZcjDYhnwKaGrKvApzd6dfZ4aoFuLr6iz",
+      "explorer": "https://explorer.solana.com/tx/5c87TurSca8jAYmgA7faKSHTWXRgp2ZBv3SghMKJ1DQNVwHWtTg7MZtwZcjDYhnwKaGrKvApzd6dfZ4aoFuLr6iz?cluster=devnet"
+    }
+  },
+  "directEscrowReleasePath": {
+    "status": "finalized",
+    "amountLamports": 100000,
+    "amountSol": 0.0001,
+    "reference": "Grv7om8SF7MTBSSqV6t4hMVdxLLJneaizu4QqsNAcqDa",
+    "escrowPda": {
+      "address": "8YuLsCJHCCEgqg97qvtCWjSWDwc1ayWDfqesCcpEY57N",
+      "explorer": "https://explorer.solana.com/address/8YuLsCJHCCEgqg97qvtCWjSWDwc1ayWDfqesCcpEY57N?cluster=devnet"
+    },
+    "depositTransaction": {
+      "signature": "3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ",
+      "explorer": "https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet"
+    },
+    "releaseTransaction": {
+      "signature": "m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph",
+      "explorer": "https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet"
+    }
+  },
+  "directEscrowRefundPath": {
+    "status": "finalized",
+    "amountLamports": 100000,
+    "amountSol": 0.0001,
+    "reference": "8zJhAWfP5qKQemkZ2EGvhTTXq3y1jA7wQQP5EctT2amW",
+    "deadlineIso": "2026-07-07T13:57:24.000Z",
+    "escrowPda": {
+      "address": "raWrBD9bdY1fxgnW6uMB12TbjbjYfFF35iyyt62Xvhz",
+      "explorer": "https://explorer.solana.com/address/raWrBD9bdY1fxgnW6uMB12TbjbjYfFF35iyyt62Xvhz?cluster=devnet"
+    },
+    "depositTransaction": {
+      "signature": "2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF",
+      "explorer": "https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet"
+    },
+    "refundTransaction": {
+      "signature": "3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS",
+      "explorer": "https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet"
+    }
+  },
+  "notes": [
+    "Arbiter open is the vault-backed deposit transaction for the arbiter settlement path.",
+    "Arbiter release is not claimed in this proof because the deployed config requires a different arbiter signer than the local disposable key.",
+    "Direct escrow release and direct escrow refund paths are both finalized on devnet.",
+    "This proof strengthens the public chain evidence without claiming mainnet readiness or real revenue."
+  ]
+}

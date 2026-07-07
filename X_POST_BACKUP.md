@@ -18,6 +18,8 @@ Current public proof:
 
 - buyer devnet funding proof
 - finalized buyer-to-seller devnet smoke transfer
+- finalized arbiter open/deposit proof
+- finalized direct escrow release and refund proofs
 - buyer and seller source code
 - 29 passing tests across buyer and seller packages
 - structured `sample_copyrescue_delivery.json`
@@ -27,8 +29,8 @@ Honest scope:
 
 - current proof is devnet-only
 - no real revenue is claimed yet
-- current Explorer proof is a smoke transfer, not a full captured arbiter escrow lifecycle
-- full arbiter lifecycle proof is tracked in `ARBITER_LIFECYCLE_STATUS.md` and `FULL_ARBITER_ESCROW_PROOF.md`
+- public Explorer proof includes smoke transfer, arbiter open/deposit, and direct release/refund paths
+- arbiter release is not claimed because the deployed arbiter config requires a different signer than the local disposable arbiter key
 
 Reviewer links:
 
