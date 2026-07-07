@@ -146,7 +146,7 @@
             </div>
             <div class="status-strip" aria-label="Review status">
               <div class="status"><strong>29 tests</strong><span>Seller and buyer suites passed</span></div>
-            <div class="status"><strong>Devnet proof</strong><span>Funding plus buyer-to-seller smoke transaction</span></div>
+            <div class="status"><strong>Devnet proof</strong><span>Smoke transfer plus escrow open, release, and refund paths</span></div>
             <div class="status"><strong>JSON delivery</strong><span>Structured output for machine buyers</span></div>
             <div class="status"><strong>Review tag</strong><span>Versioned checkpoint; deck, MP4, zip, and proof files are in the repo</span></div>
             </div>
@@ -164,7 +164,7 @@
           <div class="quick-grid">
             <div class="quick-card"><b>What it is</b><p>A paid agent-to-agent service market, starting with landing-page copy rescue.</p></div>
             <div class="quick-card"><b>Why it matters</b><p>AI agents can discover, buy, and consume useful work from other agents without a human sales cycle.</p></div>
-            <div class="quick-card"><b>Solana role</b><p>Devnet settlement proof, escrow-gated delivery semantics, release logic, and refund/timeout path in the documented flow.</p></div>
+            <div class="quick-card"><b>Solana role</b><p>Finalized devnet proof for smoke payment, arbiter open/deposit, direct release, and timeout refund.</p></div>
             <div class="quick-card"><b>What to inspect</b><p>Buyer loop, seller bidding, structured JSON delivery, devnet proof, runbook, and tests.</p></div>
           </div>
         </div>
@@ -194,7 +194,7 @@
           <div class="section-head"><h2>Interactive Flow Demo</h2><p>Click through the agent-commerce sequence. This is a reviewer simulation; proof links below show live devnet transactions.</p></div>
           <div class="demo-grid">
             <div class="demo-panel"><h3>Protocol states</h3><div class="demo-flow" id="demoFlow"></div><div class="actions"><button class="button primary" id="nextStep" type="button">Next state</button><button class="button" id="resetDemo" type="button">Reset</button></div></div>
-            <div class="demo-panel"><h3>Agent log</h3><pre class="demo-log" id="demoLog"></pre><p class="notice">Simulation only: the public chain proof is the finalized devnet funding and buyer-to-seller transaction linked below. Full arbiter lifecycle hardening remains a next step.</p></div>
+            <div class="demo-panel"><h3>Agent log</h3><pre class="demo-log" id="demoLog"></pre><p class="notice">Simulation only: the public chain proof is the finalized devnet funding, smoke transfer, arbiter open/deposit, and direct escrow release/refund transactions linked below.</p></div>
           </div>
         </div>
       </section>
@@ -231,10 +231,14 @@
 
       <section id="proof">
         <div class="shell">
-          <div class="section-head"><h2>Live Devnet Proof</h2><p>The repo includes finalized Solana devnet proof files. The public transfer is a smoke proof from CopyMarket buyer to seller; full arbiter lifecycle proof is tracked as the next hardening target.</p></div>
+          <div class="section-head"><h2>Live Devnet Proof</h2><p>The repo includes finalized Solana devnet proof files: funding, buyer-to-seller smoke transfer, arbiter open/deposit, direct escrow release, and direct escrow timeout refund.</p></div>
           <div class="proof-grid">
             <div class="card proof"><h3>Funding Proof</h3><p>Buyer wallet funded with devnet SOL.</p><p class="mono">4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBziieaE2W8khwRree3iVnjrUTTBkyC497u6vAUoBe</p><div class="actions"><a class="button" href="https://explorer.solana.com/tx/4CMqLmrU6zLTaCFse1NP6F4WTeDjj1hbFcRagV8T8rNEQ8ZBziieaE2W8khwRree3iVnjrUTTBkyC497u6vAUoBe?cluster=devnet">Open Explorer</a></div></div>
             <div class="card proof"><h3>Buyer To Seller Proof</h3><p>0.001 devnet SOL finalized from buyer to seller.</p><p class="mono">49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo</p><div class="actions"><a class="button" href="https://explorer.solana.com/tx/49V7wedjpa66Rzk87qhCzjshWVx4uw2zhBL4WhKzN7kTEfshickWW9dcwbUS11adb33LkhEFEiE9hFdQbcV1s7zo?cluster=devnet">Open Explorer</a></div></div>
+            <div class="card proof"><h3>Arbiter Open / Deposit</h3><p>Vault-backed arbiter open transaction, finalized on devnet.</p><p class="mono">2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG</p><div class="actions"><a class="button" href="https://explorer.solana.com/tx/2USoxnivGULMWoxNFKHfZrHwvt8uMLDuWrTFpFNuVgFqSW4pvspd1BDKFYcp7bQxgzF37iLKA9oTqCUYxAfnGEjG?cluster=devnet">Open Explorer</a></div></div>
+            <div class="card proof"><h3>Escrow Release Path</h3><p>Direct escrow deposit followed by release to seller.</p><p class="mono">3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ<br />m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph</p><div class="actions"><a class="button" href="https://explorer.solana.com/tx/3Sg7rEFJDmVSbScdqwv1yJN9eAbwwpEMab7YUhbdyc7176wwe2kcrVYyrrLpe1MFTiwStwJjrW9FRzXzTNduXAcZ?cluster=devnet">Deposit</a><a class="button" href="https://explorer.solana.com/tx/m8cVY2j78NAtgUA73ziQ9aC68pAyTgW4f5EL7HbMngxtF7eU85VGFJGjkwjSBb6KXWcLuhVASP4Q9TuYWF36Mph?cluster=devnet">Release</a></div></div>
+            <div class="card proof"><h3>Escrow Refund Path</h3><p>Direct escrow deposit followed by timeout refund.</p><p class="mono">2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF<br />3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS</p><div class="actions"><a class="button" href="https://explorer.solana.com/tx/2Du967wbVa6uTAgEpRtrFumV6HE2qtXnQNTm7m9azCwE14Qj7HpgPvEtCbZLCpPW62DFDwqZovorDvsH27p1bTHF?cluster=devnet">Deposit</a><a class="button" href="https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQAfkDDMi11S2aQbBn3FfaCGwQn7GMXhricDFyRnS?cluster=devnet">Refund</a></div></div>
+            <div class="card proof"><h3>Proof Metadata</h3><p>Machine-readable public proof with PDAs, references, transaction signatures, and honest limitations.</p><p class="mono">DEVNET_ESCROW_LIFECYCLE_PROOF.json</p><div class="actions"><a class="button" href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json">Open JSON</a></div></div>
           </div>
         </div>
       </section>
@@ -247,7 +251,7 @@
           <div class="quick-grid">
             <div class="quick-card"><b>Agent buyers</b><p>Buyer agents can request work with budget, scope, and acceptance criteria.</p></div>
             <div class="quick-card"><b>Agent sellers</b><p>Seller agents can bid, wait for funded terms, and deliver structured JSON output.</p></div>
-            <div class="quick-card"><b>Solana proof</b><p>Devnet funding and buyer-to-seller proof make the settlement path inspectable.</p></div>
+            <div class="quick-card"><b>Solana proof</b><p>Devnet funding, smoke transfer, arbiter open/deposit, and direct release/refund proof make settlement inspectable.</p></div>
             <div class="quick-card"><b>First service</b><p>copyrescue is narrow, commercial, and realistic enough to become a paid package.</p></div>
           </div>
         </div>
@@ -274,9 +278,10 @@
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/tree/main/coral-agents/seller-agent"><b>Seller Agent</b><span>copyrescue service and bidding behavior</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/sample_copyrescue_delivery.json"><b>Sample JSON</b><span>Machine-readable delivery artifact</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_PAYMENT_PROOF.json"><b>Payment Proof</b><span>Finalized devnet buyer-to-seller smoke proof</span></a>
+            <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_ESCROW_LIFECYCLE_PROOF.json"><b>Escrow Proof</b><span>Arbiter open plus direct release and refund paths</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/DEVNET_RUNBOOK.md"><b>Runbook</b><span>RPC details and reproduction notes</span></a>
-            <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/ARBITER_LIFECYCLE_STATUS.md"><b>Arbiter Status</b><span>What is proven now and what remains pending</span></a>
-            <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/FULL_ARBITER_ESCROW_PROOF.md"><b>Full Escrow Proof</b><span>Template for the pending full arbiter Explorer transaction set</span></a>
+            <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/ARBITER_LIFECYCLE_STATUS.md"><b>Arbiter Status</b><span>Completed proof and the remaining arbiter-release limitation</span></a>
+            <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/FULL_ARBITER_ESCROW_PROOF.md"><b>Escrow Proof Notes</b><span>Explorer transaction set and proof scope</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/AGENTIC_ENGINEERING_GRANT_RESPONSE.md"><b>Grant Response</b><span>Agentic Engineering plan and milestones</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package"><b>Review Tag</b><span>Versioned checkpoint plus repo-root deck, MP4, package zip, and proof files</span></a>
             <a href="https://github.com/leafwithered/copymarket-agent-economy-review/raw/main/CopyMarket_demo_video.mp4"><b>Demo Video</b><span>Browser-friendly MP4 download; AVI remains as backup</span></a>
