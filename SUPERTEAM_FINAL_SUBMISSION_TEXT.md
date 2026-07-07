@@ -37,6 +37,8 @@ The sold artifact is concrete: hero rewrite, CTA, three section rewrites, conver
 
 No real revenue is claimed yet. The next milestone is one paid copyrescue loop with stablecoin or mainnet settlement, a public order receipt, and a structured delivery artifact. The output is structured JSON so another agent can consume it without parsing a vague chat transcript.
 
+Current public Explorer proof includes buyer funding, buyer-to-seller smoke transfer, arbiter open/deposit, direct escrow release, and direct escrow refund. Full arbiter release is not claimed yet because the deployed arbiter config requires a different signer than the local disposable arbiter key.
+
 Pitch deck: https://github.com/leafwithered/copymarket-agent-economy-review/blob/main/CopyMarket_Agent_Economy_Pitch.pptx
 Demo video: https://github.com/leafwithered/copymarket-agent-economy-review/raw/main/CopyMarket_demo_video.mp4
 Review tag snapshot: https://github.com/leafwithered/copymarket-agent-economy-review/tree/v0.1-review-package

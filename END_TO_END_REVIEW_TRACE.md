@@ -10,6 +10,13 @@ CopyMarket demonstrates an agent-to-agent service market where a buyer agent req
 seller agents bid, the buyer awards one seller, delivery is gated by settlement state,
 and public Solana devnet transactions prove the payment/escrow paths used for review.
 
+## Current Proof Snapshot
+
+Current public proof includes buyer funding, buyer-to-seller smoke transfer, arbiter
+open/deposit, direct escrow release, and direct escrow refund. Full arbiter release is not
+claimed because the deployed arbiter config requires a signer whose private key is not present
+in this review repo.
+
 ## Reviewer Trace
 
 | Step | Market State | What to inspect | Proof type |
@@ -76,6 +83,7 @@ https://explorer.solana.com/tx/3RieKuRAsTHfHAxwLCSHipwVMp1E5XhVLJEqaqHrnMXbRVSyQ
 
 Real public proof:
 
+- finalized devnet buyer funding transaction
 - finalized devnet buyer-to-seller smoke transfer
 - finalized arbiter open / vault-backed deposit
 - finalized direct escrow deposit / release path

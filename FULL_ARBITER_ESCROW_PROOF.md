@@ -6,9 +6,10 @@ This file records the public Solana devnet chain evidence available for CopyMark
 
 It does not claim mainnet readiness, real revenue, or a completed arbiter release. It does show:
 
-1. Arbiter `open` / vault-backed deposit.
-2. Direct escrow deposit / release.
-3. Direct escrow deposit / timeout refund.
+1. Buyer funding and buyer-to-seller smoke transfer.
+2. Arbiter `open` / vault-backed deposit.
+3. Direct escrow deposit / release.
+4. Direct escrow deposit / timeout refund.
 
 The machine-readable proof is in `DEVNET_ESCROW_LIFECYCLE_PROOF.json`.
 
